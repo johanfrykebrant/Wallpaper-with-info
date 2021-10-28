@@ -31,6 +31,9 @@ def create_wallpaper():
 def set_wallpaper():
     dir = os.getcwd()
     file = dir + '/wallpaper.png'
+    # this command confimred to work for Raspbian
+    command = "pcmanfm --set-wallpaper " + file
+    # this command confimred to work for Ubuntu
     command = "gsettings set org.gnome.desktop.background picture-uri '" + file + "'" 
     os.system(command)
 
@@ -39,5 +42,5 @@ def main():
     set_wallpaper()
 
 if __name__ == '__main__':
-        main()
+    main()
         
